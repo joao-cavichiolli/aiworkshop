@@ -2,8 +2,6 @@
 import { modules } from "../data/catalog";
 
 export default function Hero() {
-  const featured = modules.filter(m => m.featured);
-
   return (
     <section style={{ paddingTop: 120, paddingBottom: 80, position: "relative", zIndex: 1 }}>
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 24px" }}>
@@ -22,9 +20,10 @@ export default function Hero() {
           letterSpacing: "-0.02em",
           marginBottom: 24,
           maxWidth: 800,
+          color: "var(--text-primary)",
         }}>
           Train your AI skills.<br />
-          <span style={{ color: "var(--green)" }}>Build better</span> projects.
+          <span style={{ color: "var(--purple)" }}>Build better</span> projects.
         </h1>
 
         {/* Subtitle */}
@@ -44,8 +43,8 @@ export default function Hero() {
         <div className="fade-up fade-up-4" style={{ display: "flex", gap: 12, flexWrap: "wrap", marginBottom: 80 }}>
           <a href="#catalog" style={{
             fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: "0.08em",
-            background: "var(--green)", color: "#080808", fontWeight: 700,
-            padding: "12px 28px", borderRadius: 4, textDecoration: "none",
+            background: "var(--purple-dark)", color: "#ffffff", fontWeight: 700,
+            padding: "12px 28px", borderRadius: 6, textDecoration: "none",
             transition: "opacity 0.2s",
           }}
             onMouseEnter={e => (e.currentTarget.style.opacity = "0.85")}
@@ -55,12 +54,12 @@ export default function Hero() {
           </a>
           <a href="https://taikai.network" target="_blank" rel="noopener noreferrer" style={{
             fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: "0.08em",
-            border: "1px solid rgba(255,255,255,0.12)", color: "var(--text-secondary)",
-            padding: "12px 28px", borderRadius: 4, textDecoration: "none",
+            border: "1px solid rgba(0,0,0,0.15)", color: "var(--text-secondary)",
+            padding: "12px 28px", borderRadius: 6, textDecoration: "none",
             transition: "border-color 0.2s, color 0.2s",
           }}
-            onMouseEnter={e => { e.currentTarget.style.borderColor = "rgba(255,255,255,0.3)"; e.currentTarget.style.color = "#f0f0f0"; }}
-            onMouseLeave={e => { e.currentTarget.style.borderColor = "rgba(255,255,255,0.12)"; e.currentTarget.style.color = "var(--text-secondary)"; }}
+            onMouseEnter={e => { e.currentTarget.style.borderColor = "var(--purple-border)"; e.currentTarget.style.color = "var(--purple)"; }}
+            onMouseLeave={e => { e.currentTarget.style.borderColor = "rgba(0,0,0,0.15)"; e.currentTarget.style.color = "var(--text-secondary)"; }}
           >
             VIEW ON TAIKAI ↗
           </a>
@@ -81,7 +80,7 @@ export default function Hero() {
             <div key={stat.label} style={{
               padding: "20px 16px", background: "var(--bg-card)", textAlign: "center",
             }}>
-              <div style={{ fontFamily: "var(--font-mono)", fontSize: 22, fontWeight: 700, color: "var(--green)" }}>
+              <div style={{ fontFamily: "var(--font-mono)", fontSize: 22, fontWeight: 700, color: "var(--purple)" }}>
                 {stat.value}
               </div>
               <div style={{ fontFamily: "var(--font-sans)", fontSize: 12, color: "var(--text-secondary)", marginTop: 4 }}>

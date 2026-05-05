@@ -5,16 +5,17 @@
 @tailwind utilities;
 
 :root {
-  --green: #22c55e;
-  --green-dim: rgba(34, 197, 94, 0.08);
-  --green-border: rgba(34, 197, 94, 0.3);
-  --bg: #080808;
-  --bg-card: #0f0f0f;
-  --bg-card-hover: #141414;
-  --text-primary: #f0f0f0;
-  --text-secondary: #888;
-  --text-muted: #3a3a3a;
-  --border: rgba(255,255,255,0.06);
+  --purple: #7B5CF6;
+  --purple-dark: #4B32C3;
+  --purple-dim: rgba(123, 92, 246, 0.08);
+  --purple-border: rgba(123, 92, 246, 0.3);
+  --bg: #ffffff;
+  --bg-card: #f7f7fb;
+  --bg-card-hover: #efeffa;
+  --text-primary: #0f0f1a;
+  --text-secondary: #555570;
+  --text-muted: #aaaabc;
+  --border: rgba(0,0,0,0.08);
   --font-mono: 'Space Mono', monospace;
   --font-sans: 'DM Sans', sans-serif;
 }
@@ -36,24 +37,25 @@ body::before {
   position: fixed;
   inset: 0;
   background-image:
-    linear-gradient(rgba(34,197,94,0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(34,197,94,0.025) 1px, transparent 1px);
+    linear-gradient(rgba(123,92,246,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(123,92,246,0.04) 1px, transparent 1px);
   background-size: 60px 60px;
   pointer-events: none;
   z-index: 0;
 }
 
+
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
-::-webkit-scrollbar-thumb { background: var(--green-border); border-radius: 2px; }
+::-webkit-scrollbar-thumb { background: var(--purple-border); border-radius: 2px; }
 
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 @keyframes glow-pulse {
-  0%, 100% { box-shadow: 0 0 20px rgba(34,197,94,0.15); }
-  50%       { box-shadow: 0 0 40px rgba(34,197,94,0.3); }
+  0%, 100% { box-shadow: 0 0 20px rgba(123,92,246,0.15); }
+  50%       { box-shadow: 0 0 40px rgba(123,92,246,0.3); }
 }
 
 .fade-up   { animation: fadeUp 0.55s ease both; }
@@ -69,8 +71,8 @@ body::before {
   font-size: 10px;
   letter-spacing: 0.08em;
   padding: 3px 8px;
-  border: 1px solid var(--green-border);
-  color: var(--green);
+  border: 1px solid var(--purple-border);
+  color: var(--purple);
   border-radius: 2px;
   text-transform: uppercase;
   white-space: nowrap;
@@ -88,7 +90,7 @@ body::before {
   cursor: pointer;
 }
 .card-link:hover {
-  border-color: var(--green-border);
+  border-color: var(--purple-border);
   background: var(--bg-card-hover);
   transform: translateY(-2px);
 }

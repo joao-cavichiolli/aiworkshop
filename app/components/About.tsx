@@ -31,12 +31,12 @@ export default function About() {
           {/* Left */}
           <div>
             <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
-              <div style={{ width: 32, height: 1, background: "var(--green)" }} />
-              <span style={{ fontFamily: "var(--font-mono)", fontSize: 11, color: "var(--green)", letterSpacing: "0.1em" }}>
+              <div style={{ width: 32, height: 1, background: "var(--purple)" }} />
+              <span style={{ fontFamily: "var(--font-mono)", fontSize: 11, color: "var(--purple)", letterSpacing: "0.1em" }}>
                 ABOUT THE PROJECT
               </span>
             </div>
-            <h2 style={{ fontFamily: "var(--font-mono)", fontSize: "clamp(22px, 3vw, 36px)", fontWeight: 700, letterSpacing: "-0.02em", marginBottom: 24, lineHeight: 1.2 }}>
+            <h2 style={{ fontFamily: "var(--font-mono)", fontSize: "clamp(22px, 3vw, 36px)", fontWeight: 700, letterSpacing: "-0.02em", marginBottom: 24, lineHeight: 1.2, color: "var(--text-primary)" }}>
               Built for TAIKAI.<br />Designed for builders.
             </h2>
             <p style={{ fontFamily: "var(--font-sans)", fontSize: 15, color: "var(--text-secondary)", lineHeight: 1.75, marginBottom: 16 }}>
@@ -48,12 +48,12 @@ export default function About() {
             <a href="https://taikai.network/layerx/hackathons/hacklayer4-1-mcp-edition" target="_blank" rel="noopener noreferrer"
               style={{
                 fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "0.08em",
-                border: "1px solid var(--green-border)", color: "var(--green)",
-                padding: "10px 20px", borderRadius: 4, textDecoration: "none",
-                display: "inline-block", transition: "background 0.2s",
+                background: "var(--purple-dark)", color: "#ffffff",
+                padding: "10px 20px", borderRadius: 6, textDecoration: "none",
+                display: "inline-block", transition: "opacity 0.2s",
               }}
-              onMouseEnter={e => (e.currentTarget.style.background = "rgba(34,197,94,0.08)")}
-              onMouseLeave={e => (e.currentTarget.style.background = "transparent")}
+              onMouseEnter={e => (e.currentTarget.style.opacity = "0.85")}
+              onMouseLeave={e => (e.currentTarget.style.opacity = "1")}
             >
               SEE PROJECT ON TAIKAI ↗
             </a>
@@ -67,11 +67,11 @@ export default function About() {
                 borderRadius: 8, padding: "20px",
                 transition: "border-color 0.2s",
               }}
-                onMouseEnter={e => (e.currentTarget.style.borderColor = "var(--green-border)")}
+                onMouseEnter={e => (e.currentTarget.style.borderColor = "var(--purple-border)")}
                 onMouseLeave={e => (e.currentTarget.style.borderColor = "var(--border)")}
               >
-                <div style={{ color: "var(--green)", fontSize: 20, marginBottom: 10 }}>⬡</div>
-                <h4 style={{ fontFamily: "var(--font-sans)", fontSize: 14, fontWeight: 600, marginBottom: 8, color: "#f0f0f0" }}>
+                <div style={{ color: "var(--purple)", fontSize: 20, marginBottom: 10 }}>⬡</div>
+                <h4 style={{ fontFamily: "var(--font-sans)", fontSize: 14, fontWeight: 600, marginBottom: 8, color: "var(--text-primary)" }}>
                   {p.title}
                 </h4>
                 <p style={{ fontFamily: "var(--font-sans)", fontSize: 12, color: "var(--text-secondary)", lineHeight: 1.6 }}>

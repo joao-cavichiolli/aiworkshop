@@ -20,12 +20,12 @@ export default function Catalog() {
         {/* Section header */}
         <div style={{ marginBottom: 48 }}>
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
-            <div style={{ width: 32, height: 1, background: "var(--green)" }} />
-            <span style={{ fontFamily: "var(--font-mono)", fontSize: 11, color: "var(--green)", letterSpacing: "0.1em" }}>
+            <div style={{ width: 32, height: 1, background: "var(--purple)" }} />
+            <span style={{ fontFamily: "var(--font-mono)", fontSize: 11, color: "var(--purple)", letterSpacing: "0.1em" }}>
               TRAINING CATALOG
             </span>
           </div>
-          <h2 style={{ fontFamily: "var(--font-mono)", fontSize: "clamp(24px, 4vw, 40px)", fontWeight: 700, letterSpacing: "-0.02em" }}>
+          <h2 style={{ fontFamily: "var(--font-mono)", fontSize: "clamp(24px, 4vw, 40px)", fontWeight: 700, letterSpacing: "-0.02em", color: "var(--text-primary)" }}>
             All Modules
           </h2>
         </div>
@@ -40,9 +40,9 @@ export default function Catalog() {
               style={{
                 fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.06em",
                 padding: "5px 12px", borderRadius: 3, border: "1px solid",
-                borderColor: activeCategory === cat ? "var(--green)" : "var(--border)",
-                background: activeCategory === cat ? "rgba(34,197,94,0.1)" : "transparent",
-                color: activeCategory === cat ? "var(--green)" : "var(--text-secondary)",
+                borderColor: activeCategory === cat ? "var(--purple)" : "var(--border)",
+                background: activeCategory === cat ? "var(--purple-dim)" : "transparent",
+                color: activeCategory === cat ? "var(--purple)" : "var(--text-secondary)",
                 cursor: "pointer", transition: "all 0.15s",
               }}
             >
@@ -60,9 +60,9 @@ export default function Catalog() {
               style={{
                 fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.06em",
                 padding: "5px 12px", borderRadius: 3, border: "1px solid",
-                borderColor: activeLevel === lvl ? (lvl === "All" ? "var(--green)" : levelColors[lvl as Level]) : "var(--border)",
-                background: activeLevel === lvl ? `rgba(${lvl === "Beginner" ? "34,197,94" : lvl === "Intermediate" ? "245,158,11" : lvl === "Advanced" ? "239,68,68" : "34,197,94"},0.1)` : "transparent",
-                color: activeLevel === lvl ? (lvl === "All" ? "var(--green)" : levelColors[lvl as Level]) : "var(--text-secondary)",
+                borderColor: activeLevel === lvl ? (lvl === "All" ? "var(--purple)" : levelColors[lvl as Level]) : "var(--border)",
+                background: activeLevel === lvl ? `rgba(${lvl === "Beginner" ? "34,197,94" : lvl === "Intermediate" ? "245,158,11" : lvl === "Advanced" ? "239,68,68" : "123,92,246"},0.08)` : "transparent",
+                color: activeLevel === lvl ? (lvl === "All" ? "var(--purple)" : levelColors[lvl as Level]) : "var(--text-secondary)",
                 cursor: "pointer", transition: "all 0.15s",
               }}
             >
@@ -105,7 +105,7 @@ export default function Catalog() {
                   <div style={{ marginBottom: 10 }}>
                     <span style={{
                       fontFamily: "var(--font-mono)", fontSize: 9, letterSpacing: "0.08em",
-                      color: "var(--green)", borderBottom: "1px solid rgba(34,197,94,0.3)", paddingBottom: 1,
+                      color: "var(--purple)", borderBottom: "1px solid var(--purple-border)", paddingBottom: 1,
                     }}>
                       ★ FEATURED
                     </span>
@@ -113,7 +113,7 @@ export default function Catalog() {
                 )}
 
                 {/* Title */}
-                <h3 style={{ fontFamily: "var(--font-sans)", fontSize: 17, fontWeight: 600, lineHeight: 1.3, marginBottom: 10, color: "#f0f0f0" }}>
+                <h3 style={{ fontFamily: "var(--font-sans)", fontSize: 17, fontWeight: 600, lineHeight: 1.3, marginBottom: 10, color: "var(--text-primary)" }}>
                   {mod.title}
                 </h3>
 
@@ -144,7 +144,7 @@ export default function Catalog() {
                       {mod.lessons} lessons
                     </span>
                   </div>
-                  <span style={{ display: "flex", alignItems: "center", gap: 4, fontFamily: "var(--font-mono)", fontSize: 10, color: "var(--green)" }}>
+                  <span style={{ display: "flex", alignItems: "center", gap: 4, fontFamily: "var(--font-mono)", fontSize: 10, color: "var(--purple)" }}>
                     START <ChevronRight size={11} />
                   </span>
                 </div>

@@ -20,11 +20,11 @@ export default function Footer() {
         <div style={{ display: "flex", gap: 24 }}>
           {[
             { label: "TAIKAI", href: "https://taikai.network" },
-            { label: "GitHub", href: "https://github.com" },
+            { label: "GitHub", href: "https://github.com/joao-cavichiolli/aiworkshop" },
           ].map(link => (
             <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer"
               style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "0.08em", color: "var(--text-muted)", textDecoration: "none", transition: "color 0.2s" }}
-              onMouseEnter={e => (e.currentTarget.style.color = "var(--green)")}
+              onMouseEnter={e => (e.currentTarget.style.color = "var(--purple)")}
               onMouseLeave={e => (e.currentTarget.style.color = "var(--text-muted)")}
             >
               {link.label}
